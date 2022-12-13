@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mata Mosquitos</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="./imagens/coracao_cheio.png" alt="Imagem vidas - corações cheio">
+            <img id="v2" src="./imagens/coracao_cheio.png" alt="Imagem vidas - corações cheio">
+            <img id="v3" src="./imagens/coracao_cheio.png" alt="Imagem vidas - corações cheio">
+        </div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+    </div>
+    <!-- <img src="./imagens/mosquito.png" alt="Imagem do Mosquito" class="mosquito1"> -->
+    <script src="./script.js"></script>
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo;
+
+        let criaMosquito = setInterval(function () {
+            posicaoRandomica()
+        }, criaMosquitoTempo)
+    </script>
+</body>
+
+</html>
